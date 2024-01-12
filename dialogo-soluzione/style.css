@@ -1,0 +1,34 @@
+.d3bo {
+    color:rgb(181, 124, 0);
+    font-weight: bold;
+}
+
+.darth {
+    color: #222;
+}
+
+.leila {
+    color:#1aa580;
+}
+
+.soldato-1 {
+    color:#999;
+}
+
+.soldato-2 {
+    color:#666;
+}
+
+.capo-pilota {
+    color:#ff0000;
+}
+
+
+/*SE VOGLIO AGIRE SU DUE SELETTORI LI SEPARO CON LA VIRGOLA */
+.ufficiale, .ufficiale-2 {
+color:#000099;
+}
+
+.comandante {
+    color:#006600;
+}

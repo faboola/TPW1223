@@ -1,0 +1,58 @@
+body {
+
+    font-family: 'Cabin',sans-serif;
+
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 42px;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 28px;
+}
+
+img {
+    /* width: 100%; */
+    /*larghezza pari al 100% del genitore */
+    /* ATTENZIONE: utilizzando width:100% allargo anche le immagini piccole,
+    che andranno ad allargarsi fino a riempire il contenitore */
+
+    max-width: 100%;
+    /* Utilizzando max-width l'immagine non andrà mai oltre il 100%
+    del suo contenitore. Se l'immagine è più piccola del contenitore,
+    non cambia nulla e resta della sua dimensione nativa */
+}
+
+.container {
+    width: 1100px;
+
+    /*data una larghezza dell'elemento, calcola i margini in automatico*/
+    /* margin-left: auto;
+    margin-right: auto; */
+
+    /*in alternativa, scorciatoia:*/
+    margin: 0 auto;
+    /*indicando due valori definisco col primo valore top+bottom
+    e col secondo valore left+right.
+    Equivale a scrivere margin-left:auto e margin-right:auto */
+    
+}
+
+.step {
+    background-color: #E09438;
+    color: #fff;
+    font-weight: 700;
+    padding:2px 8px 2px 8px;
+    border-radius:3px; /* ARROTONDA GLI ANGOLI */
+    text-shadow: 1px 1px #4c3111;
+
+}
+
+.align-left {
+    float:left;
+    margin-right:16px;
+}
+

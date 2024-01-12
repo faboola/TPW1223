@@ -1,0 +1,56 @@
+body {
+    /*questo SELETTORE tipo TAG che agisce sul BODY*/
+
+    /*background-color: colore di sfondo dell'elemento */
+    background-color: rgba(0, 0, 0, 1);
+    /* rgba crea un colore con livelli di R,G,B da 0 a 255.
+    l'ultimo valore è la trasparenza (alpha channel) */
+
+    /*color: colore del contenuto (testo) */
+
+    color:#fdfdfd;
+    /*allineamento del testo: */
+    /* evitare se possibile!
+    text-align: justify;
+    */
+    text-align: left;    /*valore di default*/
+
+    /*per cambiare il tipo di font */
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1, h2 {
+    /*seleziono sia gli H1 sia gli H2 */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    color:#777777;
+}
+
+h2 {
+    color:#287fa7;
+    /*testo in corsivo*/
+    font-style: italic;
+}
+
+a {
+    /*font-weight definisce lo SPESSORE del carattere */
+    font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                          SELETTORE DI TIPO CLASSE                          */
+/* -------------------------------------------------------------------------- */
+
+.intro {
+    /*.nomeClasse per i selettori di tipo "classe" */
+    font-size: 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            SELETTORE DI TIPO ID                            */
+/* -------------------------------------------------------------------------- */
+
+#scoiattoli {
+    color:#990000;
+}
