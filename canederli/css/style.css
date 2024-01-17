@@ -1,3 +1,6 @@
+* {box-sizing: border-box;}
+/*cambio il box-model per evitare che i PADDING ingrandiscano gli elementi blocco*/
+
 body {
 
     font-family: 'Cabin',sans-serif;

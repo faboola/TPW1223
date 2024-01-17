@@ -1,0 +1,43 @@
+img {
+    max-width: 100%;
+    /*per rendere FLUIDE tutte le immagini*/
+    /*in questo modo l'immagine non fuoriesce dal conteintore se più grande*/
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between; /*allineo in orizzontale (main axis)*/
+
+    align-items: center; /*allineo in verticale (cross axis) */
+}
+
+.logo {
+    width: 200px;
+}
+
+
+
+.mainMenu ul { /*il tag <ul> DENTRO l'elemento con classe .mainMenu */
+
+    list-style-type: none;
+
+    display: flex; /*faccio affiancare i figli <li> */
+    
+    column-gap: 2rem; /*spazio orizzontale tra gli elementi <li> */
+
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                HERO SECTION                                */
+/* -------------------------------------------------------------------------- */
+
+#hero {
+    background-image: url('../hero.jpg');
+    /* devo tornare indietro di una cartella con ../ */
+}

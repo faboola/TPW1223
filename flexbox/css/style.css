@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex; /*ATTIVA FLEXBOX SU ELEMENTO*/
+
+    /* disporre gli elementi sull'asse principale*/
+    /*valore di default:*/
+    /* justify-content: flex-start; */
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+}
+
+.box {
+    border:1px solid red;
+}
+
+.container-b {
+    background-color: gold;
+    height:400px;
+
+    display: flex;
+
+    /*ALLINEAMENTO SULL'ASSE INCROCIATO:*/
+    /*proprietà di default: */
+   /* align-items: stretch; */
+   /* -------------------- */
+
+  
+
+   align-items: flex-end;
+
+}
+
+.box-b {
+    border:1px solid forestgreen;
+}
+
+.gallery {
+    /* width:1200px; */
+
+    display: flex;
+    /* di default, flexbox non manda a capo, bisogna usare:*/
+    flex-wrap: wrap;
+
+    gap: 16px;
+    /*GAP crea uno spazio tra tutti gli elementi interni */
+    /*oppure: row-gap per le righe e column-gap per le colonne*/
+
+    justify-content: center;
+
+
+
+}
+
+img {
+    display: block; /*per eliminare lo spazietto sotto*/
+}
