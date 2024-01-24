@@ -1,7 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    /*tutti i titoli h1 saranno grandi 3rem*/
+}
+
+a {
+    color:#39700b;
+    text-decoration: none;
+}
+
+
+/* colore dei link visitati */
+a:visited {
+    color:#39700b;
+}
+
+
+
+
 img {
+    display: block; /*elimino lo spazietto maledetto */
+
     max-width: 100%;
     /*per rendere FLUIDE tutte le immagini*/
     /*in questo modo l'immagine non fuoriesce dal conteintore se più grande*/
+}
+
+.button, a.button {
+    background:#566946;
+    color:#fefefe;
+
+    text-decoration: none;
+    /*elimino il sottolineato*/
+
+    padding: 1rem 2rem;
+    /*sopra e sotto: 1rem e sinistra-destra 2rem*/
+
+    border-radius: 6px;
+
+    display: inline-block;
+    /* mostra l'elemento come in linea, ma aggiungi le caratteristiche di un
+    elemento blocco, tranne per il fatto di occupare il 100% dello spazio*/
+
 }
 
 .container {
@@ -17,7 +64,8 @@ img {
 }
 
 .logo {
-    width: 200px;
+    width:160px;
+    padding:0.75rem;
 }
 
 
@@ -40,4 +88,114 @@ img {
 #hero {
     background-image: url('../hero.jpg');
     /* devo tornare indietro di una cartella con ../ */
+
+    background-size: cover;
+    /*per adattare l'immagine al contenitore*/
+
+    background-position: center center;
+    /*centriamo l'immagine sul contenitore*/
+
+    background-repeat: no-repeat;
+    /*immagine messa una volta sola e non a mattoncini*/
+
+    height: 80vh;
+
+    display: flex;
+    /*per centrare la CTA (elemento figlio di #hero) applico flexbox*/
+
+    justify-content: center;
+    align-items: center;
+    /*centriamo l'elemento .cta sull'asse orizzontale (justify) e verticale (align)*/
+}
+
+.cta {
+    text-align: center;
+}
+
+.cta h1 {
+    /*tutti gli H1 dentro .cta avranno queste regole*/
+    font-weight: 300;
+    margin-bottom:-1rem; 
+    /* i margini negativi SPOSTANO l'elemento nella direzione del margine corrispondente*/
+}
+
+.cta p {
+    font-size: 1.5rem;
+    margin-bottom:3rem;
+}
+
+.cta a {
+    color:white;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               SEZIONE SERVIZI                              */
+/* -------------------------------------------------------------------------- */
+
+#servizi { /*sezione contenitore dei servizi */
+
+    padding-top: 6rem;
+
+}
+
+.servizio {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: 3rem;
+   
+}
+
+.servizio:nth-of-type(even) .servImage {
+    /*pseudo-classe che seleziona solo gli elementi ogni X - oppure pari, dispari etc */
+    /*VEDI QUA: https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type */
+    
+    order:1;
+    /*gli elementi .servImage DENTRO .servizio (ma solo quelli PARI!) si spostano dopo i loro fratelli*/
+    /*in pratica l'immagine appare a DESTRA anziché normalmente a sinistra */
+
+}
+
+.servizio:nth-of-type(even) .servText {
+    text-align: right;
+}
+
+
+
+.servImage {
+    width: 33.3333%;
+   
+}
+
+.servText {
+    width: 66.6666%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               SEZIONE GALLERY                              */
+/* -------------------------------------------------------------------------- */
+
+.sectionTitle {
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+
+    border-bottom:1px solid #566946;
+}
+
+.galleryWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 1rem; */
+    /*quando finisce lo spazio, vai a capo */
+
+}
+
+.galleryItem {
+    width: 25%;
+    padding:1rem;
+/* 
+    Formula: (100/colonne - gap) + (gap / colonne) */
+    /* width: calc((25% - 1rem) + (1rem / 4)); */
+   
 }
