@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width:94%;
+    margin:auto;
+}
+
+.button {
+    background-color: #2a40b9;
+    color:white;
+    display: inline-block; 
+    padding:0.75rem 2.5rem;
+    border-radius:6rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    MENU                                    */
+/* -------------------------------------------------------------------------- */
+
+#mainHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    HERO                                    */
+/* -------------------------------------------------------------------------- */
+
+#hero {
+    background-image: url('https://source.unsplash.com/1080x1920?ocean');
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 3rem;
+}
+
+.cta {
+    text-align: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  PROPOSTE                                  */
+/* -------------------------------------------------------------------------- */
+.prop {
+    margin-bottom: 2rem;
+}
+.pFooter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+.pFooter .price {
+    font-weight: 700;
+    font-size: 1.25rem;
+}

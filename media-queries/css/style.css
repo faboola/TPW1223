@@ -1,0 +1,66 @@
+/* -------------------------------------------------------------------------- */
+/*                              REGOLE GENERICHE                              */
+/* -------------------------------------------------------------------------- */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 6rem;
+    color:white;
+}
+
+.box {
+    background-color: blueviolet;
+}
+
+
+@media screen and (min-width:992px) {
+
+    /*qua scriviamo le regole specifiche per questa media query */
+
+    .box {
+        background-color: chartreuse;
+    }
+
+    h1 {
+        font-size: 8rem;
+    }
+
+
+}
+
+@media screen and (min-width:1000px) and (max-width:1100px) {
+    .box {
+        background-color: darkorange;
+       border:10px solid black;
+    }
+}
+
+@media screen and (orientation: portrait ) {
+    h1 {
+        font-style: italic;
+    }
+}
+
+
+@media screen and (min-width:1200px) {
+
+    .box {
+        background-color: fuchsia;
+    }
+
+}
+
+
+/*per intercettare il dark mode del sistema operativo */
+
+@media screen and (prefers-color-scheme: dark ) { /*oppure light */
+
+body {
+    background: black;
+    color:white;
+}
+
+}
