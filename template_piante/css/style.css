@@ -112,6 +112,14 @@ img {
     text-align: center;
 }
 
+.cactus svg {
+    width: 3rem;
+}
+.cactusSvg { /* questo fa riferimento all'elemento PATH dell SVG */
+    fill:#566946;
+    /* stroke-width: 8px;
+    stroke:#00f2ff; */
+}
 .cta h1 {
     /*tutti gli H1 dentro .cta avranno queste regole*/
     font-weight: 300;
@@ -201,4 +209,28 @@ img {
     Formula: (100/colonne - gap) + (gap / colonne) */
     /* width: calc((25% - 1rem) + (1rem / 4)); */
    
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+
+.mainFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerSocial {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.footerLegal {
+    text-align: right;
+}
+
+.footerSection {
+    width: 33.33%;
+
 }
