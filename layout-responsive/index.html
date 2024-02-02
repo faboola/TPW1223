@@ -273,6 +273,28 @@
         </div>
 
     </footer>
+
+    <script>
+
+        document.getElementById('menuIcon').addEventListener("click", addMenuClass);
+
+        //Funzione che aggiunge la classe
+
+        function addMenuClass() {
+        var header = document.getElementById('mainHeader');
+        var menuIcon = document.getElementById('menuIcon');
+
+        //aggiungo o tolgo la classe in base al click
+        header.classList.toggle('is-mobile-open');
+        menuIcon.classList.toggle('open');
+
+        }
+
+        
+
+
+
+    </script>
     
 </body>
 </html>
