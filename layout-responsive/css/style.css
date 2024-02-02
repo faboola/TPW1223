@@ -57,6 +57,7 @@ a {
 
 .logo svg {
     height: 2.5rem;
+    fill: white;
 }
 
 
@@ -95,6 +96,19 @@ a {
 
 .is-mobile-open .mainMenu a {
     font-size: 2rem;
+}
+
+#menuIcon.open i.icon-menu:before{ 
+
+    /* quando l'elemento menuIcon prende la classe .open (dopo il click)
+    vado a sostituire il CONTENUTO dell'icona di fontello .icon-menu. 
+
+    In pratica, anziché farla corrispondere all'iconcina hamburger, imposto
+    il suo CONTENT come quello dell'icona .icon-cancel
+    */
+
+    content: '\e804';
+
 }
 
 /* -------------------------------------------------------------------------- */
