@@ -52,6 +52,11 @@ a {
     color:white;
 }
 
+.menuIcon {
+    appearance: none;
+    background: transparent;
+}
+
 .logo svg {
     height: 2.5rem;
 }
