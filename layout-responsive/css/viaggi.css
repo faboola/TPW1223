@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'viaggi';
-  src: url('../font/viaggi.eot?25777174');
-  src: url('../font/viaggi.eot?25777174#iefix') format('embedded-opentype'),
-       url('../font/viaggi.woff2?25777174') format('woff2'),
-       url('../font/viaggi.woff?25777174') format('woff'),
-       url('../font/viaggi.ttf?25777174') format('truetype'),
-       url('../font/viaggi.svg?25777174#viaggi') format('svg');
+  src: url('../font/viaggi.eot?13814894');
+  src: url('../font/viaggi.eot?13814894#iefix') format('embedded-opentype'),
+       url('../font/viaggi.woff2?13814894') format('woff2'),
+       url('../font/viaggi.woff?13814894') format('woff'),
+       url('../font/viaggi.ttf?13814894') format('truetype'),
+       url('../font/viaggi.svg?13814894#viaggi') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'viaggi';
-    src: url('../font/viaggi.svg?25777174#viaggi') format('svg');
+    src: url('../font/viaggi.svg?13814894#viaggi') format('svg');
   }
 }
 */
@@ -59,5 +59,6 @@
 .icon-diving:before { content: '\e802'; } /* '' */
 .icon-basket:before { content: '\e803'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-menu:before { content: '\f0c9'; } /* '' */
 .icon-instagram:before { content: '\f16d'; } /* '' */
 .icon-map-pin:before { content: '\f276'; } /* '' */

@@ -43,6 +43,18 @@ a {
     z-index:9; 
 }
 
+.mainMenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mainMenu a {
+    color:white;
+}
+
+.logo svg {
+    height: 2.5rem;
+}
 
 /* -------------------------------------------------------------------------- */
 /*                                    HERO                                    */
