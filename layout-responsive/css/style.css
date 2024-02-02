@@ -7,6 +7,7 @@ body {
 }
 
 img {
+    display: block;
     max-width: 100%;
     height: auto;
 }
@@ -48,7 +49,7 @@ a {
 /* -------------------------------------------------------------------------- */
 
 #hero {
-    background-image: url('https://source.unsplash.com/1080x1920?ocean');
+    background-image: url('../hero_vertical.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center center;
@@ -64,6 +65,7 @@ a {
 
 .cta {
     text-align: center;
+    margin-top: -6rem; /* sposta in alto su mobile */
 }
 
 .sectionTitle {
@@ -169,6 +171,10 @@ a {
     margin-bottom: 1rem;
 }
 
+.footerWrapper .social {
+    font-size: 2rem;
+}
+
 
 /* -------------------------------------------------------------------------- */
 /*                        MEDIA QUERY PER SCHERMI MEDI                        */
@@ -195,8 +201,25 @@ a {
 
     .meteWrapper {
         display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .topMeta {
+        width: 33.33%;
+        margin-bottom: 0;
     }
 
+    .topMeta:nth-of-type(-n+2) {
+        width: 50%;
+    }
+
+
+
+    
+    
+     /* .col-2 {
+            width: 50%;
+    } */
 }
 
 
@@ -205,6 +228,18 @@ a {
 /* -------------------------------------------------------------------------- */
 
 @media screen and (min-width: 992px) {
+
+    #hero {
+        background-image: url('../hero_horiz.jpg');
+
+    }
+
+    .cta {
+        font-size: 2rem;
+        /* Con normalize.css ci portiamo dietro le dimenisioni dei titoli in EM. Questo significa che 
+        in questo caso, h1 dentro il contenitore .cta diventerà grande 4rem (2rem moltiplicato per due)*/ 
+    }
+
 
     .infoWrapper {
         display: flex;
@@ -235,9 +270,34 @@ a {
     }
 
 
+/* FOOTER */
+
+    .footerWrapper {
+        display: flex;
+        color:#c6c6c6;
+
+    }
+
+   .footerWrapper .credits {
+    width: 50%;
+    align-self: flex-end;
+    }
+
+    .footerWrapper .social {
+        font-size: 2.5rem;
+        text-shadow: 1px 1px #0e1748;
+        text-align: right;
+    }
 
 
-    
+    .footerWrapper .social, .footerWrapper .siteInfo {
+        width: 25%;
+        margin-top: 0;
+        margin-bottom: 0;
+       
+    }
+
+
 
 }
 
