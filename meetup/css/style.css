@@ -1,0 +1,233 @@
+/* -------------------------------------------------------------------------- */
+/*                               REGOLE GENERALI                              */
+/* -------------------------------------------------------------------------- */
+
+:root {
+    --main-color: #2E69C1;
+    --alt-color: #f7cb0b;
+    --alert-color: #c23400;
+
+    --dark-gray: #2e2e2e;
+    --medium-gray:rgb(77, 77, 77);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    font-weight: 300;
+}
+
+h3 {
+    font-weight: 200;
+}
+
+.container {
+    width:85%;
+
+    margin: auto;
+}
+
+.sectionTitle {
+    text-align: center;
+}
+
+.button {
+    background-color: var(--alert-color);
+    color:white;
+    border:none;
+    padding:0.75rem 1.5rem;
+    border-radius:3rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   HEADER                                   */
+/* -------------------------------------------------------------------------- */
+
+#mainHeader {
+    position: fixed;
+    width: 100%;
+    padding:1rem 0;
+}
+
+
+#mainHeader .menuWrapper {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo img{
+    height: 1.5rem;
+    width: auto;
+}
+
+nav.mainMenu {
+    display: none;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    HERO                                    */
+/* -------------------------------------------------------------------------- */
+
+section#hero {
+    background: var(--main-color);
+    height: 100vh;
+    display: flex;
+
+    color: white;
+    text-align: center;
+
+}
+
+#hero h1 {
+    margin: 0;
+}
+
+.heroImage {
+    display: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    ABOUT                                   */
+/* -------------------------------------------------------------------------- */
+
+#about {
+
+}
+
+.aboutItem {
+    text-align: center;
+}
+
+.aboutIcon {
+    font-size: 4rem;
+    color:var(--main-color);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  SPEAKERS                                  */
+/* -------------------------------------------------------------------------- */
+
+.speakerItem {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.speakerName {
+    font-size: 1.25rem;
+    font-weight: 200;
+}
+
+.speakerItem i.ti-facebook {
+    color:#4863A8;
+}
+
+.speakerItem i.ti-twitter {
+    color: #00a6ff;
+}
+.speakerItem i.ti-linkedin {
+    color: #0077B5;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   TICKETS                                  */
+/* -------------------------------------------------------------------------- */
+
+section#tickets {
+    background: var(--alt-color);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.ticketItem {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ticketName {
+    font-size: 1.25rem;
+}
+
+.ticketPrice {
+    font-size: 2.5rem;
+    color:var(--alert-color);
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.ticketDesc {
+    margin-bottom: 1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                GET IN TOUCH                                */
+/* -------------------------------------------------------------------------- */
+
+section#contact {
+    background-color: var(--medium-gray);
+    color:white;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+label, input, textarea {
+    display: block;
+    width: 100%;
+}
+
+.formInput {
+    margin-bottom: 1rem;
+}
+
+ul.feed {
+    list-style-type: none;
+    margin: 0;
+}
+
+.feed li {
+    margin-bottom: 1rem;
+}
+
+.feed .user {
+    color:var(--alt-color);
+    font-weight: 600;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+
+#mainFooter {
+    background-color: var(--dark-gray);
+    color:white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.footerWrapper {
+   text-align: center;
+}
+
+.footerLinks {
+    color:var(--alt-color);
+}
