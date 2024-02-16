@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Classifica di Serie A</h1>
+
+
+    
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Pos.</th>
+                <th scope="col">Squadra</th>
+                <th scope="col">V</th>
+                <th scope="col">P</th>
+                <th scope="col">S</th>
+                <th scope="col">Pt</th>
+
+                <!-- L'attributo "scope" definisce il riferimento dell'intestazione
+                - non è obbligatorio e serve in caso di dati ambigui. -->
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>1</td>
+                <td>Inter</td>
+                <td>19</td>
+                <td>3</td>
+                <td>1</td>
+                <td>60</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Juventus</td>
+                <td>16</td>
+                <td>5</td>
+                <td>3</td>
+                <td>53</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Milan</td>
+                <td>16</td>
+                <td>4</td>
+                <td>4</td>
+                <td>52</td>
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+
+        </tfoot>
+
+    </table>
+
+
+<h2>
+    Orari attività giovani
+</h2>
+<div class="tableContainer">
+    <p>
+        Nel caso in cui la tabella fosse troppo grande per lo schermo mobile
+        potete assegnare a questo div la proprietà overflow-x:auto
+    </p>
+    <table>
+        <caption>
+            Orario settimanale
+        </caption>
+        <tbody>
+    
+    
+            <tr>
+                <td></td>
+                <th scope="col">Lun</th>
+                <th scope="col">Mar</th>
+                <th scope="col">Mer</th>
+            </tr>
+    
+            <tr>
+                <th scope="row">09.00 - 10.00</th>
+                <td>Colazione</td>
+                <td>Stretching</td>
+                <td>Oroscopo</td>
+            </tr>
+    
+            <tr>
+                <th scope="row">10.00 - 11.00 </th>
+                <td>Giro pastiglie</td>
+                <td>Lamentarsi</td>
+                <td>Briscola</td>
+            </tr>
+    
+            <tr>
+                <th scope="row">11.00 - 12.00 </th>
+                <td>Ext. uncinetto</td>
+                <td>Chatbot parenti</td>
+                <td>Spiritualità</td>
+            </tr>
+    
+            <tr>
+                <th scope="row">12.00 - 13.00</th>
+                <td colspan="3">Pranzo</td>
+            </tr>
+    
+    
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
