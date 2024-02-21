@@ -21,9 +21,77 @@
 
             <h3>Colonne di grandezza uguale</h3>
 
-            <div class="row"></div>
+            <div class="row">
+                <div class="col">Colonna 1</div>
+                <div class="col">Colonna 2</div>
+                <div class="col">Colonna 3</div>
+            </div>
+
+            <hr>
+
+            <h3>Colonne di larghezza definita</h3>
+
+            <div class="row">
+                <div class="col-4">Colonna da 4</div>
+                <div class="col-8">Colonna da 8</div>
+                <div class="col-6">Colonna da 6</div>
+                <div class="col-6">Colonna da 6</div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">Colonna da 3</div>
+                <div class="col">Colonna di larghezza auto</div>
+                <div class="col-3">Colonna da 3</div>
+            </div>
+
+            <h3>Colonne responsive</h3>
+
+            <div class="row">
+                
+                <!-- Potrei scrivere col-12 col-lg-3 etc ma il col-12 viene inserito di default.
+                Bootstrap considera 100% tutte le colonne al di sotto del primo breakpoint dichiarato 
+                 -->
+
+                <div class="col-md-2 col-lg-3">Colonna 1</div>
+                <div class="col-md-8 col-lg-6">Colonna 2</div>
+                <div class="col-md-2 col-lg-3">Colonna 3</div>
+
+            </div>
+
 
     </div>
+
+    <hr>
+
+    <div class="container">
+        <h2>Esempio di griglia nidificata</h2>
+
+        <div class="row">
+            <div class="col-lg-4"><h3>SIDEBAR</h3></div>
+            <div class="col-lg-8">
+
+                <h3>MAIN CONTENT</h3>
+
+                <div class="row">
+                    <div class="col-lg-4">COL</div>
+                    <div class="col-lg-4">COL</div>
+                    <div class="col-lg-4">COL</div>
+                    <div class="col-lg-4">COL</div>
+                    <div class="col-lg-4">COL</div>
+                    <div class="col-lg-4">COL</div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Elementi base interfaccia</h2>
+
+        <a href="" class="btn btn-primary">Button!</a>
+        
+    </div>
+
     
 
 
