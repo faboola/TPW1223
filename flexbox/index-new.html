@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+.rosso {
+    background: red;
+    display: flex;
+    height: 100vh;
+    justify-content: space-between; /*ORIZZONTALE */
+    align-items: center; /*VERTICALE */
+}
+
+.blu {
+    background: blue;
+    color:white;
+}
+
+.verde {
+    background:lawngreen;
+    height: 100vh;
+
+    display: flex;
+    flex-wrap: wrap;
+   
+
+ 
+}
+
+.rosa {
+
+    background:fuchsia;
+    width: 25%;
+
+    border:1px solid white;
+
+}
+
+
+.purp{
+    background: purple;
+    height: 100vh;
+    display: flex;
+    /* align-items: center; */
+    gap:1rem;
+
+    flex-direction: column; /*INVERTO asse principale e asse secondario: justify ora funziona sul verticale e align sull'orizzontale */
+    justify-content: flex-end;
+    align-items: start;
+}
+
+.purp::before {
+    content:'';
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: orange;
+}
+
+.giallo {
+    background: yellow;
+}
+
+#figlio-4 {
+    /* order:-1; */
+}
+
+#figlio-1 {
+    /* order:1; */
+}
+
+
+
+
+</style>
+
+
+<body>
+    <!-- <div class="rosso">
+        <div class="blu">CIAO</div>
+        <div class="blu">CIAO</div>
+    </div> -->
+
+
+    <!-- <div class="verde">
+        <div class="rosa">CIAO</div>
+        <div class="rosa">CIAO</div>
+        <div class="rosa">CIAO</div>
+        <div class="rosa">CIAO</div>
+        <div class="rosa">CIAO</div>
+        <div class="rosa">CIAO</div>
+        <div class="rosa">CIAO</div>
+        <div class="rosa">CIAO</div>
+    </div> -->
+
+<input type="email">
+
+    <div class="purp">
+        <div class="giallo" id="figlio-1">Figlio 1</div>
+        <div class="giallo">Figlio 2</div>
+        <div class="giallo">Figlio 3</div>
+        <div class="giallo" id="figlio-4">Figlio 4</div>
+    </div>
+
+</body>
+</html>
