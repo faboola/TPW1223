@@ -6,11 +6,34 @@
 
 }
 
+/*SEI STUFO DEL BORDER-RADIUS? Fallo secco così! */
+/* * {
+    border-radius: 0 !important;
+} */
+
 #hero {
+
     height: 100vh;
+    /*PER IL BACKGROUND FULL SCREEN CENTRATO: */
     background-image: url('../images/hero_mobile.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
+.hero-text {
+    margin-top: 6rem;
+}
+
+.spacer {
+    height: 400px;
+    background-image: url('../images/spacer-bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
 
 
 /* -------------------------------------------------------------------------- */
@@ -32,6 +55,13 @@
  /* BREAKPOINT LG */
 @media (min-width: 992px) { 
 
+    #hero {
+        background-image: url('../images/hero_desktop.jpg');
+    }
+
+    .hero-text {
+        margin-top: 0;
+    }
 
  }
 
