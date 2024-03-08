@@ -5,3 +5,44 @@
     width: auto;
 
 }
+
+#hero {
+    height: 100vh;
+    background-image: url('../images/hero_mobile.jpg');
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                              MEDIA QUERIES BS                              */
+/* -------------------------------------------------------------------------- */
+
+/* BREAKPOINT SM */
+@media (min-width: 576px) { 
+
+
+ }
+
+ /*BREAKPOINT MD */
+@media (min-width: 768px) { 
+
+
+ }
+
+ /* BREAKPOINT LG */
+@media (min-width: 992px) { 
+
+
+ }
+
+ /* BREAKPOINT XL */
+@media (min-width: 1200px) { 
+
+
+ }
+
+ /* BREAKPOINT XXL */
+@media (min-width: 1400px) { 
+
+
+ }
