@@ -10,6 +10,88 @@
     <!-- SOLO PER BOOTSTRAP ICONS  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <script>
+      /*!
+ * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
+ * Copyright 2011-2024 The Bootstrap Authors
+ * Licensed under the Creative Commons Attribution 3.0 Unported License.
+ */
+
+(() => {
+  
+
+  const getStoredTheme = () => localStorage.getItem('theme')
+  const setStoredTheme = theme => localStorage.setItem('theme', theme)
+
+  const getPreferredTheme = () => {
+    const storedTheme = getStoredTheme()
+    if (storedTheme) {
+      return storedTheme
+    }
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  }
+
+  const setTheme = theme => {
+    if (theme === 'auto') {
+      document.documentElement.setAttribute('data-bs-theme', (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'))
+    } else {
+      document.documentElement.setAttribute('data-bs-theme', theme)
+    }
+  }
+
+  setTheme(getPreferredTheme())
+
+  const showActiveTheme = (theme, focus = false) => {
+    const themeSwitcher = document.querySelector('#bd-theme')
+
+    if (!themeSwitcher) {
+      return
+    }
+
+    const themeSwitcherText = document.querySelector('#bd-theme-text')
+    const activeThemeIcon = document.querySelector('.theme-icon-active use')
+    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+    const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
+
+    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+      element.classList.remove('active')
+      element.setAttribute('aria-pressed', 'false')
+    })
+
+    btnToActive.classList.add('active')
+    btnToActive.setAttribute('aria-pressed', 'true')
+    activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+    const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
+    themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
+
+    if (focus) {
+      themeSwitcher.focus()
+    }
+  }
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    const storedTheme = getStoredTheme()
+    if (storedTheme !== 'light' && storedTheme !== 'dark') {
+      setTheme(getPreferredTheme())
+    }
+  })
+
+  window.addEventListener('DOMContentLoaded', () => {
+    showActiveTheme(getPreferredTheme())
+
+    document.querySelectorAll('[data-bs-theme-value]')
+      .forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const theme = toggle.getAttribute('data-bs-theme-value')
+          setStoredTheme(theme)
+          setTheme(theme)
+          showActiveTheme(theme, true)
+        })
+      })
+  })
+})()
+    </script>  
 </head>
 <body>
 
@@ -129,6 +211,36 @@
 
       <!-- FINE NAVBAR -->
 
+<!-- 
+      TEMI -->
+
+      <!-- Testo indicativo per il tema attuale -->
+<div id="bd-theme-text">Tema Attuale: <span id="current-theme">Auto</span></div>
+
+<!-- Icona attiva per il tema (potresti dover sostituire l'href con il percorso corretto dell'icona) -->
+<div class="theme-icon-active" style="display: none;">
+  <svg width="24" height="24"><use href="#icon-theme"></use></svg>
+</div>
+
+<!-- Gruppo di bottoni per cambiare il tema -->
+<div class="btn-group" role="group" aria-label="Theme switcher" id="bd-theme">
+  <button type="button" class="btn btn-secondary" data-bs-theme-value="light">
+    Light
+    <svg style="display: none;"><use href="#icon-light-theme"></use></svg>
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-theme-value="dark">
+    Dark
+    <svg style="display: none;"><use href="#icon-dark-theme"></use></svg>
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-theme-value="auto">
+    Auto
+    <svg style="display: none;"><use href="#icon-auto-theme"></use></svg>
+  </button>
+</div>
+
+
+<!-- FINE TEMI -->
+
     <div class="container">
         <h1>Introduzione a Bootstrap</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolore, enim cum ut atque dicta magnam ad error corporis voluptate autem voluptas, laudantium illo voluptatum quod harum, quia eos dignissimos quam excepturi. Minus, porro facere cupiditate dolorem labore molestiae sed?</p>
@@ -136,7 +248,9 @@
 
     <div class="container">    
         
-            <h2>La griglia!</h2>
+            
+              <h2>La griglia!</h2>
+         
 
             <h3>Colonne di grandezza uguale</h3>
 
@@ -212,7 +326,7 @@
     </div>
 
 
-    <div class="container">
+    <div class="container" >
 
     
         <h2>Cards</h2>
@@ -310,8 +424,29 @@
 
 </div>
 
+<div class="container">
+  <h2>Classi FLEX</h2>
+
+  <div class="d-flex flex-column flex-lg-row justify-content-lg-between">
+    <!-- con questa classe imposto display:flex sul div. Poi con flex-column inverto l'asse di flexbox 
+    e una volta che arrivo al breakpoint lg torno a lavorare sull'asse di default (flex-row).
+    La classe justify... gestisce l'allineamento sull'asse principale -->
+    <div>ELEMENTO 1</div>
+    <div>ELEMENTO 2</div>
+    <div>ELEMENTO 3</div>
+  </div>
+
+</div>
+
+<!-- TEMI -->
+<div class="btn-group" role="group" aria-label="Theme switcher" id="bd-theme">
+  <button type="button" class="btn btn-secondary" data-bs-theme-value="light">Light</button>
+  <button type="button" class="btn btn-secondary" data-bs-theme-value="dark">Dark</button>
+  <button type="button" class="btn btn-secondary" data-bs-theme-value="auto">Auto</button>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+   
 </body>
 </html>
