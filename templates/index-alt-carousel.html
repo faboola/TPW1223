@@ -130,12 +130,23 @@
     <div class="swiper-slide">
 
       <div class="slide-wrapper position-relative">
-        <img class="img-fluid" src="images/slide1.jpg" alt="">
+      
+        <picture>
+          <source
+          srcset="images/slide1.jpg"
+          media="(min-width:992px)"
+          >
 
-        <div class="slide-text z-1 position-absolute top-50 start-0 translate-middle-y w-100">
+          <img class="w-100" src="images/slide1-vert.jpg" alt="">
+
+        </picture>
+
+        <div class="slide-text z-1">
           <div class="container">
-            <h2>Lorem, ipsum dolor.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta odit rerum sequi!</p>
+            <div class="textwrapper">
+              <h2>Lorem, ipsum dolor.</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta odit rerum sequi!</p>
+            </div>
           </div>
         </div>
   
