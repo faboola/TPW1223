@@ -32,6 +32,28 @@
     margin-top: 6rem;
 }
 
+/* SLIDER ALTERNATIVO */
+
+.slide-wrapper {
+    position: relative;
+
+
+}
+
+.slide-wrapper:after {
+    content:'';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+  
+    background: rgb(255,255,255);
+background: linear-gradient(79deg, rgba(255,255,255,0.9150253851540616) 0%, rgba(255,255,255,0) 100%);
+    backdrop-filter: blur(10px);
+} 
+
 .spacer {
     height: 400px;
     background-image: url('../images/spacer-bg.jpg');
@@ -100,6 +122,27 @@
 .page-title {
     z-index:1;
     position: relative;
+}
+
+.video-wrapper {
+
+    position: relative;
+
+}
+
+.video-wrapper:after {
+    content:'';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: radial-gradient(circle,rgba(0,0,0,0.3603816527) 0%,rgba(0,0,0,0.808) 100%),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHElEQVQYV2NkYGD4z8DAwAijQQwQgAvCZXCqAAAEwQgDLHxvPQAAAABJRU5ErkJggg==)
+   
+  
 }
 
 /* -------------------------------------------------------------------------- */
