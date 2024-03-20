@@ -4,6 +4,7 @@
 
 @import 'normalize';
 @import 'variables';
+@import 'mixins';
 
 
 body {
@@ -12,6 +13,8 @@ body {
     // font-family: 'Comic Sans MS', cursive;
 
     font-family: $font-serif;
+    @include myGradient(red,blue);
+    background-repeat: no-repeat;
 }
 
 h1,h2,h3 {
@@ -100,5 +103,17 @@ h2 {
     }
 }
 
+
+.button-submit {
+    @include myButton($primary-color,$secondary-color);
+}
+
+.button-alt {
+@include myButton(green,yellow)
+}
+
+.button-outline {
+    @include myButton($secondary-color,$secondary-color,true);
+}
 
 

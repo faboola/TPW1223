@@ -308,15 +308,21 @@ template {
   display: none;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                          ESEMPIO MIXIN PER BOTTONE                         */
+/* -------------------------------------------------------------------------- */
 body {
   background-color: #222;
   color: white;
   font-family: "Times New Roman", Times, serif;
+  background: red;
+  background: linear-gradient(0deg, red 0%, blue 100%);
+  background-repeat: no-repeat;
 }
 
 h1, h2, h3 {
   font-family: Helvetica, Arial, sans-serif;
-  color: #9acdd9;
+  color: #206777;
 }
 
 .mainMenu {
@@ -339,7 +345,7 @@ h1, h2, h3 {
   color: #ffff00;
 }
 .mainMenu ul li a.active {
-  color: #9acdd9;
+  color: #206777;
 }
 
 p {
@@ -353,12 +359,12 @@ h2 {
 .my-link {
   color: #806600;
   color: #ffdb4d;
-  color: #bababa;
+  color: #464f51;
 }
 
 .box, h2 {
   background-color: rgba(255, 204, 0, 0.5);
-  color: #9acdd9;
+  color: #206777;
   width: 50%;
 }
 @media screen and (min-width: 780px) {
@@ -370,4 +376,43 @@ h2 {
   .box, h2 {
     background-color: blue;
   }
+}
+
+.button-submit {
+  background-color: #ffcc00;
+  color: #206777;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.button-submit:hover {
+  background-color: #e6b800;
+}
+
+.button-alt {
+  background-color: green;
+  color: yellow;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.button-alt:hover {
+  background-color: #006700;
+}
+
+.button-outline {
+  background-color: #206777;
+  color: #206777;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #206777;
+}
+.button-outline:hover {
+  background-color: #1b5663;
+}
+.button-outline:hover {
+  background-color: rgba(32, 103, 119, 0.5);
+  color: #df9888;
 }/*# sourceMappingURL=style.css.map */
