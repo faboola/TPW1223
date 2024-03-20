@@ -348,4 +348,26 @@ p {
 
 h2 {
   margin-bottom: 2rem;
+}
+
+.my-link {
+  color: #806600;
+  color: #ffdb4d;
+  color: #bababa;
+}
+
+.box, h2 {
+  background-color: rgba(255, 204, 0, 0.5);
+  color: #9acdd9;
+  width: 50%;
+}
+@media screen and (min-width: 780px) {
+  .box, h2 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .box, h2 {
+    background-color: blue;
+  }
 }/*# sourceMappingURL=style.css.map */

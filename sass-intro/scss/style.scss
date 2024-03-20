@@ -4,7 +4,6 @@
 
 @import 'normalize';
 @import 'variables';
-@import 'fonts';
 
 
 body {
@@ -68,4 +67,38 @@ p {
 
 h2 {
     margin-bottom: $spacer*2;
+    @extend .box;
+
 }
+
+.my-link {
+    color: darken($primary-color,25%); //scurisce un colore del 25%
+    color: lighten($primary-color, 15%); //scurisce un colore del 25%
+    color: desaturate($secondary-color, 50%); //toglie saturazione;
+
+}
+
+.box {
+    background-color: transparentize($primary-color,0.5);
+    //il secondo valore è da 0 a 1, dove 1=totalmente trasparente.
+    color:$secondary-color ; 
+    //l'operazione contraria si fa con opacify 
+
+   
+    width: 50%;
+
+    // MEDIA QUERIES: posso integrarle dentro un selettore.
+
+    @media screen and (min-width:780px) {
+
+        width: 100%;
+        
+    }
+
+    @media screen and (min-width: 1000px) {
+        background-color: blue;
+    }
+}
+
+
+
