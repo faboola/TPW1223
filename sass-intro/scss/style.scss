@@ -1,0 +1,71 @@
+//https://www.html.it/guide/guida-sass/
+//https://sass-lang.com/documentation/
+//https://www.w3schools.com/sass/default.php
+
+@import 'normalize';
+@import 'variables';
+@import 'fonts';
+
+
+body {
+    background-color:#222;
+    color:white;
+    // font-family: 'Comic Sans MS', cursive;
+
+    font-family: $font-serif;
+}
+
+h1,h2,h3 {
+    //se dichiaro una variabile nel selettore, lo scope della variabile è ristretto al selettore 
+   // $secondary-color: green; 
+
+    font-family: $font-sans;
+    color:$secondary-color;
+
+
+
+}
+
+
+.mainMenu {
+    padding-top:1rem;
+    padding-bottom: 1rem;
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        gap: 1rem;
+
+        li {
+            background:#333;
+            padding:0.25rem 0.5rem;
+
+            a {
+
+                color: $primary-color;   
+                
+                &:hover {
+                    color:#ffff00;
+                }
+
+                &.active {
+                    color: $secondary-color;
+                }
+            }
+
+            
+
+          
+        }
+
+    }
+
+}
+
+p {
+    margin-bottom: $spacer;
+}
+
+h2 {
+    margin-bottom: $spacer*2;
+}
