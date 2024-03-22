@@ -33,26 +33,114 @@ $black:    #000;
 $blue:    #1d72f1;
 $indigo:  #6610f2;
 $purple:  #6f42c1;
-$pink:    #d63384;
+$pink:    #f4007a;
 $red:     #dc3545;
 $orange:  #fd7e14;
 $yellow:  #ffc107;
 $green:   #198754;
 $teal:    #20c997;
 $cyan:    #0dcaf0;
+
+
+//SE VOGLIO USARE LE SHADES DI COLORI NEI MIEI VARIABLES OVERRIDE, DEVO INCLUDERLI:
+
+// $pink-100: tint-color($pink, 80%);
+// $pink-200: tint-color($pink, 60%);
+// $pink-300: tint-color($pink, 40%);
+// $pink-400: tint-color($pink, 20%);
+// $pink-500: $pink;
+// $pink-600: shade-color($pink, 20%);
+// $pink-700: shade-color($pink, 40%);
+// $pink-800: shade-color($pink, 60%);
+// $pink-900: shade-color($pink, 80%);
+
+//posso aggiungere colori personalizzati 
+//$darkblue : #111155;
+
 // scss-docs-end color-variables
 
-$primary:       $blue ;
+//posso cambiare il colore primario e secondario
+$primary:       $indigo;
 $secondary:     $gray-600;
 
-$spacer: 2rem;
+//definisco l'unità di misura base spacer
+//$spacer: 2rem;
 
+$body-color:    $gray-800;
+$body-bg: $gray-100;
+
+//MODIFICARE I BREAKPOINTS
+
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px
+//   //se voglio aggiungere un breakpoint:
+//   //xxxl: 1600px
+// ) 
+
+//MODIFICARE LA DIMENSIONE DEI CONTAINER
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  //se voglio aggiungere un valore:
+  //xxxl: 1380px
+);
+
+//CAMBIARE I FONT DI DEFAULT
+$font-family-sans-serif: 'Biryani',sans-serif;
+
+//può tornare utile aggiungere un font serif (NON è una variabile di BS!)
+//$font-family-serif: 'Alegreya', serif;
+
+//IMPOSTARE LA DIMENSIONE BASE DEL FONT
+
+$font-size-base: 1rem; 
+
+//DIMENSIONE FONT TITOLI
+
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+
+//famiglia font per titoli:
+//$headings-font-family:        null;
+
+//Per cambiare il border radius
+
+// scss-docs-start border-radius-variables
+// $border-radius:               .375rem;
+// $border-radius-sm:            .25rem;
+// $border-radius-lg:            .5rem;
+// $border-radius-xl:            1rem;
+// $border-radius-xxl:           2rem;
+// $border-radius-pill:          50rem;
+
+/* -------------------------------------------------------------------------- */
+/*                               OPZIONI GLOBALI                              */
+/* -------------------------------------------------------------------------- */
+// VEDI DOCS: https://getbootstrap.com/docs/5.3/customize/options/
+
+//$enable-dark-mode:          false;
+//$enable-rounded:            false;
+
+//disabilita completamente le classi row, col etc.
+//$enable-grid-classes:         true;
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
 
-// 4. Include any default map overrides here
+// 4. Include an map overrides here
 
 // 5. Include remainder of required parts
 @import "../node_modules/bootstrap/scss/maps";
