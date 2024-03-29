@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a.button {
+    font-weight: bold;
+    transition: all 0.25s ease-in-out;
+    /*equivale a */
+    /*transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    */
+}
+
+a.button:hover {
+
+    color:red;
+    background-color: #282828;
+
+
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border:1px solid black;
+   
+}
+
+.container {
+
+    display: flex;
+    /*se voglio nascondere gli elementi quando escono dal container:*/
+    /* overflow: hidden; */
+
+
+}
+
+#box-1 {
+   
+    background:#95ff00;
+    transition: all 0.5s ease-in-out;
+   
+}
+
+#box-1:hover {
+    background: fuchsia;
+
+    /*spostamento X o Y */
+    /* transform:translateX(50%); */
+
+    /*ruota con valore in gradi*/
+    /* transform: rotate(90deg); */
+
+    /*ridimensiona | accetta % oppure valore da 0 a N*/
+    /* transform: scale(0.5);  */
+
+    /*distorce*/
+    /* transform:skew(10deg, 20deg);  */
+
+    /*per combinare più animazioni:*/
+    transform:rotate(360deg) scale(1.5);
+    
+}
+
+/*ESEMPIO HOVER PER GALLERY*/
+
+.galleryWrapper {
+    margin-top: 4rem;
+    display: flex;
+    gap:1rem;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.galleryItem {
+    overflow: hidden;
+}
+
+.galleryItem img{
+    transition: all 0.5s ease-in-out;
+    filter:grayscale(100%)
+}
+
+.galleryItem:hover img {
+    transform:scale(1.2);
+    filter: brightness(1.5);
+    filter:grayscale(0);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 ANIMAZIONI                                 */
+/* -------------------------------------------------------------------------- */
+
+#box-4 {
+    border:1px solid black;
+    background:#c428fc;
+    width: 200px;
+    height: 200px;
+}
+
+.animated {
+    animation-name: ruotami;
+    animation-duration: 4s;
+}
+
+body {
+    
+    
+    /* animation-name: bg-anim;
+    animation-duration: 10s;
+    animation-iteration-count: infinite; */
+    
+    /* OPPURE la proprietà shorthand: */
+
+    animation:bg-anim 5s infinite;
+}
+
+@keyframes ruotami {
+    from {
+        transform: rotate(0);
+    }
+
+   to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bg-anim {
+
+0% {
+    background-color: #95ff00;
+}
+25% {
+    background-color: #ffee00;
+}
+50% {
+    background-color: #00d970;
+}
+75% {
+    background-color: #bf00ff;
+}
+100% {
+    background-color: #95ff00;
+}
+
+}
+
