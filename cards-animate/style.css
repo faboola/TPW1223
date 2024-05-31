@@ -1,0 +1,37 @@
+
+
+
+@media screen and (min-width:992px) {
+
+
+.myCard {
+    position: relative;
+    overflow-y: hidden;
+    }
+    
+    .myCard:hover .myText {
+    transform: translateY(0);
+    }
+    
+    .myImage {
+    
+    }
+    
+    .myText {
+        background: rgba(0,0,0,0.5);
+        color:white;
+        position: absolute;
+        bottom:0;
+        transform: translateY(100%);
+        padding:0.5rem;
+
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+    
+        /*effetto transizione*/
+        transition:all 0.5s ease-in-out;
+    }
+
+}
